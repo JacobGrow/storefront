@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>storefront</title>
+</head>
+<body>
+<header class="container-fluid">
+    <div class="row">
+        <div class="col bg-primary">
+            <h1 class="text-center">My Guitars</h1>
+        </div>
+    </div>
+</header>
+
+<main class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-12">
+            <form class="form-inline" onsubmit="app.guitarsController.newGuitar(event)">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
+                        placeholder="Title..." required>
+                </div>
+                <div class="form-group">
+                    <label for="make">Brand</label>
+                    <input type="text" class="form-control" name="brand" id="brand" aria-describedby="brand"
+                        placeholder="Brand..." required>
+                </div>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <input type="text" class="form-control" name="model" id="model" aria-describedby="model"
+                        placeholder="Model...">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number" class="form-control" name="price" id="price" aria-describedby="price"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" name="description" id="description"
+                        aria-describedby="description" placeholder="Description...">
+                </div>
+                <div class="form-group">
+                    <label for="imgUrl">Image Url</label>
+                    <input type="url" class="form-control" name="imgUrl" id="imgUrl" aria-describedby="imgUrl"
+                        placeholder="Image Url..." required>
+                </div>
+                <button type="submit" class="btn btn-outline-success">Submit</button>
+            </form>
+        </div>
+    </div>
+
+<!-- This is the marketplace -->
+    <div class="row mt-3" id="guitars">
+       
+    </div>
+
+<!-- This is the cart -->
+    <div class="row mt-3 separator" id="cart">
+        
+    </div>
+
+</main>
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</footer>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
